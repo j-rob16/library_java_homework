@@ -33,6 +33,8 @@ public class Library {
 
     public void leaseBook(Book bookToLease) {
         books.remove(bookToLease);
+        genres.put(bookToLease.getGenre(), genres.get(bookToLease.getGenre()) - 1);
+
     }
 
     public int getGenresCount(String key) {
